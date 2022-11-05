@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+}
+
+/* ----- VARIABLES ----- */
+:root{
+    --LIGHTCOLOR: #fff;
+    --DARKCOLOR: #000;
+}
+
+.bodyName{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.5rem;
+    min-height: 100vh;
+    background-color: var(--LIGHTCOLOR);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ----- HEADER ----- */
+header{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-left: auto;
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding-right: 50px;
+}
+
+header .share{
+    background-image: url(./images/share.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    padding-right: 600px;
+}
+
+.profile_section{
+    text-align: center;
+}
+.profile_section #profile__img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.profile_section #twitter{
+    margin-top: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 30px;
+    color: #101828;
+
+}
+
+/* ----- CONTENT ----- */
+.links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    width: 600px;
+    margin: auto;
+}
+
+.links a{
+    text-decoration: none;
+    color: var(--DARKCOLOR);
+    font-size: 1.2rem;
+    background: #EAECF0;
+    border: 1px solid #EAECF0;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 15px 25px;
+
+}
+a:hover{
+    box-shadow: 3px 2px 6px #ced2da;
+    cursor: pointer;
+}
+
+/* ----- LINKS ----- */
+.slack{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slack img{
+    font-size: 30px;
+    padding: 0 10px 0 10px;
+}
+
+/* contact form */
+.contactBody{
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--LIGHTCOLOR);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+textarea{
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: block;
+    margin-top: 2rem;
+}
+
+/* ----- FOOTER ----- */
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    padding: 20px 30px;
+    background: -var(--LIGHTCOLOR);
+    border-top: 3px solid rgb(226, 223, 223);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ingression_logo{
+  margin-top: -35px;
+  z-index: -10;
+}
+
+/* ----- MEDIA QUERY ----- */
+@media screen and (max-width:760px){
+    footer{
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+        margin-top: 50px;
+
+    }
+    footer > div{
+        margin-top: 8px;
+        font-size: 1.2em;
+    }
+    .ingression_logo{
+        margin-top: -10px;
+    }
+    li{
+        background: #EAECF0;
+        border: 1px solid #EAECF0;
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    header .share{
+        background-image: url(./images/dots.png);
+        width: 50px;
+        height: 50px;
+        padding-right: 150px;
+    }
+    .links{
+        max-width: 100%;
+    }
+
+    .links a{
+        width: 70%;
+        flex-direction: column;
+        padding: 20px 30px;
+        margin: 10px auto 10px auto;
+    
+    }
+}
+
