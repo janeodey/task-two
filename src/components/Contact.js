@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Footer from "./Footer";
+import "./contactStyle.css"
 
 const Contact = () =>{
     const [formData, setformData] = useState({
@@ -7,7 +7,7 @@ const Contact = () =>{
         lastName:"",
         email:"",
         message:"",
-        isChecked:true
+        isChecked:false
     })
     
     function handleChange(event){
@@ -23,12 +23,13 @@ const Contact = () =>{
     }
     // console.log(formData.firstName)
     return(
-        <div>
+        <div className="contactContent">
             <form onSubmit={handleSubmit}  className="contactBody">
             <h1>Contact Me</h1>
             <p>Hello there, contact me to ask me about anything you have in mind.</p>
-           <div>
-                <label htmlFor="first_name">First Name</label>
+           <div className="names">
+                <div>
+                <label htmlFor="first_name">First Name</label> <br/>
                 <input 
                     type="text"
                     id="first_name"
@@ -37,19 +38,21 @@ const Contact = () =>{
                     value={formData.firstName}
                     onChange={handleChange}
                 />
-           
-                <label htmlFor="last_name">Last Name</label>
-                <input 
-                    text="text"
-                    id="last_name"
-                    placeholder="Enter your last name"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                />
+              </div>
+              <div>
+                    <label htmlFor="last_name">Last Name</label><br/>
+                    <input 
+                        text="text"
+                        id="last_name"
+                        placeholder="Enter your last name"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                    />
+                </div>
            </div>
            <div>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email</label> <br/>
                 <input 
                     id="email"
                     placeholder="yourname@email.com"
@@ -60,7 +63,8 @@ const Contact = () =>{
                 />
            </div>
            <div>
-                
+                <label htmlFor="message">Message</label> <br/>
+               
                 <textarea 
                     placeholder="send me a message and i will reply as soon as possible"
                     name="message"
@@ -78,9 +82,9 @@ const Contact = () =>{
                     id="box"
                     onChange={handleChange}
                 />
-                <label htmlFor="box">You agree to providing your data to jane who may contact you</label>
+                <label htmlFor="box" className="checkMessage">You agree to providing your data to jane who may contact you</label>
            </div>
-           <button id="btn__submit">Submit</button>
+           <button id="btn__submit">Send message</button>
         </form>
         </div>
     )
