@@ -1,31 +1,26 @@
 import React from "react";
 import Footer from "./components/Footer";
-import LinkPage from "./components/LinkPage";
-import SocialFonts from "./components/SocialFonts";
-import SocialProfile from "./components/SocialProfile";
 import Contact from "./components/Contact";
 import {Routes, Route} from "react-router-dom"
-
+import Home from "./components/Home"
 
 
 function App(){
-  return(
-    <div className="bodyContent">
-      <header >
-        <p className="share" ></p>
-      </header>
-      <SocialProfile/>   
-      <LinkPage/>
-      <SocialFonts/>
-      <Footer/>
-      {/* <Routes>
-      <Route path="/contact" element={<Contact/>}/>
-      </Routes> */}
+    return(
+      <div className="bodyContent">
+        <header >
+          <p className="share" ></p>
+        </header>
+        <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/contact" element={<Contact/>}/>
+        </Routes>
+        <Footer/>
       
-
-    </div>
-  )
-}
-
+        
+  
+      </div>
+    )
+  }
 
 export default App;

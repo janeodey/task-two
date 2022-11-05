@@ -66,6 +66,7 @@ const Contact = () =>{
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    id="message"
                 />
            </div>
            <div>
@@ -79,9 +80,8 @@ const Contact = () =>{
                 />
                 <label htmlFor="box">You agree to providing your data to jane who may contact you</label>
            </div>
-           <button>Submit</button>
+           <button id="btn__submit">Submit</button>
         </form>
-        <Footer/>
         </div>
     )
 }

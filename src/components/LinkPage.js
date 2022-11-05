@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, Routes, Route } from "react-router-dom";
-import Contact from "./Contact";
 
 const LinkPage = () =>{
 
@@ -20,10 +19,7 @@ const LinkPage = () =>{
 
             <a href={Pitch} id="pitch" title="where you pitch a service for doing background checks on coders.">Background Checks for Coders</a>
             <a href={Design} id="book__design" title="where you pitch the free design book offered by Zuri.">Design Books</a>
-            <Link id="contact" to="/contact">Contact</Link>
-            {/* <Routes>
-                <Route path="/contact" element={<Contact/>}/>
-            </Routes> */}
+            <Link id="contact" to="/contact" target="_blank">Contact</Link>
     </section>
     )
 }
