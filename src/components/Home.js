@@ -8,6 +8,9 @@ import SocialProfile from "./SocialProfile";
 const Home = () =>{
     return(
         <div>
+            <header >
+          <p className="share" ></p>
+        </header>
             <SocialProfile/>   
             <LinkPage/>
             <SocialFonts/>

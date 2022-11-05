@@ -8,9 +8,6 @@ import Home from "./components/Home"
 function App(){
     return(
       <div className="bodyContent">
-        <header >
-          <p className="share" ></p>
-        </header>
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/contact" element={<Contact/>}/>

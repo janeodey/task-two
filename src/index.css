@@ -73,7 +73,6 @@ header .share{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    height: auto;
     width: 600px;
     margin: auto;
 }
@@ -87,6 +86,9 @@ header .share{
     border-radius: 8px;
     margin-top: 10px;
     padding: 15px 25px;
+    padding: 24px 32px;
+    height: 76px;
+
 
 }
 a:hover{
