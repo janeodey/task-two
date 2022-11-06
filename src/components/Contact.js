@@ -37,6 +37,7 @@ const Contact = () =>{
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
+                        required
                     />
                     </div>
                     <div>
@@ -48,6 +49,7 @@ const Contact = () =>{
                             name="lastName"
                             value={formData.lastName}
                             onChange={handleChange}
+                            required
                         />
                     </div>
                 </div>
@@ -60,6 +62,7 @@ const Contact = () =>{
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div>
@@ -71,6 +74,7 @@ const Contact = () =>{
                         value={formData.message}
                         onChange={handleChange}
                         id="message"
+                        required
                     />
                 </div>
                 <div>
@@ -81,6 +85,7 @@ const Contact = () =>{
                         name="isChecked"
                         id="box"
                         onChange={handleChange}
+                        required
                     />
                     <label htmlFor="box" className="checkMessage">You agree to providing your data to jane who may contact you</label>
                 </div>
